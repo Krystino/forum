@@ -1,29 +1,25 @@
-export default function DetailPost() {
+import { useLocation } from 'react-router-dom';
+
+import posts from '../json/posts.json';
+
+import DetailPost from './DetailPost';
+import Comment from './Comment';
+
+export default function Detail() {
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const id = searchParams.get('id'); // 获取查询参数 `id` 的值
+
+  const post = posts.filter((v) => v.id === id)[0];
+
+  const { comments } = post;
   return (
     <div className="max-w-md mx-auto bg-white">
-      <Post
-        subreddit="r/televisionsuggestions"
-        username="u/aarongifs"
-        time="1h"
-        title="Please Distract Me From Reality"
-        content="I live in America and I am very sad today. What should I watch today to forget how sad the world is?"
-        upvotes={21}
-        comments={74}
-      />
+      <DetailPost post={post} />
 
-      <Comment
-        username="danytheredditer"
-        time="1h"
-        content="Schitt’s Creek"
-        upvotes={13}
-      />
-
-      <Comment
-        username="throwaw939393"
-        time="22m"
-        content="This will be my show today 💔😔💔"
-        upvotes={3}
-      />
+      {comments.map((comment) => {
+        return <Comment key={comment.id} comment={comment} />;
+      })}
 
       <Comment
         username="Milly_Hagen"
@@ -61,70 +57,32 @@ export default function DetailPost() {
   );
 }
 
-function Post({
-  subreddit,
-  username,
-  time,
-  title,
-  content,
-  upvotes,
-  comments,
-}) {
-  return (
-    <div className="p-4 border-b border-gray-200">
-      <div className="flex items-center text-xs text-gray-500 mb-1">
-        <p className="font-bold">{subreddit}</p>
-        <span className="mx-1">•</span>
-        <p>{username}</p>
-        <span className="mx-1">•</span>
-        <p>{time}</p>
-      </div>
-      <h2 className="text-lg font-semibold text-gray-900 mb-1">{title}</h2>
-      <p className="text-sm text-gray-700 mb-4">{content}</p>
-      <div className="flex space-x-4 text-gray-500 text-sm">
-        <span>👍 {upvotes}</span>
-        <span>💬 {comments}</span>
-        <span>🔗</span>
-        <span>📤</span>
-      </div>
-    </div>
-  );
-}
-
-function Comment({ username, time, content, upvotes, replies }) {
-  return (
-    <div className="flex items-start space-x-2 p-4 border-b border-gray-200">
-      <img
-        src="https://styles.redditmedia.com/t5_379gw/styles/communityIcon_mx3mfwfzpup91.png?width=64&height=64&frame=1&auto=webp&crop=64:64,smart&s=d8343c9d7c2be645935e65af21d3c019c0c671b3"
-        alt="Avatar"
-        className="w-8 h-8 rounded-full"
-      />
-      <div className="flex-1">
-        <div className="flex items-center text-xs text-gray-500 mb-1">
-          <p className="font-medium">{username}</p>
-          <span className="mx-1">•</span>
-          <p>{time}</p>
-        </div>
-        <p className="text-sm text-gray-900 mb-2">{content}</p>
-        <div className="flex items-center space-x-4 text-gray-500 text-sm">
-          <span>↩️ Reply</span>
-          <span>👍 {upvotes}</span>
-        </div>
-        {replies && (
-          <div className="pl-8 mt-4 border-l border-gray-200">
-            {replies.map((reply, index) => (
-              <Comment
-                key={index}
-                username={reply.username}
-                time={reply.time}
-                content={reply.content}
-                upvotes={reply.upvotes}
-                replies={reply.replies}
-              />
-            ))}
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
+// function Post({
+//   subreddit,
+//   username,
+//   time,
+//   title,
+//   content,
+//   upvotes,
+//   comments,
+// }) {
+//   return (
+//     <div className="p-4 border-b border-gray-200">
+//       <div className="flex items-center text-xs text-gray-500 mb-1">
+//         <p className="font-bold">{subreddit}</p>
+//         <span className="mx-1">•</span>
+//         <p>{username}</p>
+//         <span className="mx-1">•</span>
+//         <p>{time}</p>
+//       </div>
+//       <h2 className="text-lg font-semibold text-gray-900 mb-1">{title}</h2>
+//       <p className="text-sm text-gray-700 mb-4">{content}</p>
+//       <div className="flex space-x-4 text-gray-500 text-sm">
+//         <span>👍 {upvotes}</span>
+//         <span>💬 {comments}</span>
+//         <span>🔗</span>
+//         <span>📤</span>
+//       </div>
+//     </div>
+//   );
+// }

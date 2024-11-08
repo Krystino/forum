@@ -1,7 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import RedditForum from './components/Forum';
-import DetailPost from './components/Detail';
+import Detail from './components/Detail';
 
 export default function App() {
   const router = createBrowserRouter([
@@ -11,7 +11,7 @@ export default function App() {
     },
     {
       path: '/detail',
-      element: <DetailPost />,
+      element: <Detail />,
     },
   ]);
   return <RouterProvider router={router} />;
