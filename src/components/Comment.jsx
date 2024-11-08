@@ -1,22 +1,14 @@
 /* eslint-disable react/prop-types */
-export default function Comment(commentObj) {
-  // console.log(username1, time1, content1, upvotes1, replies1);
-  // const { id } = comment;
-  console.log('commentObj'), commentObj;
-  const comment = commentObj['comment'];
-  console.log('comment', comment);
-  // const { id, username, time, content, upvotes, replies } = comment;
-  const id = 1;
-  const username = 2;
-  const time = 3;
-  const content = 4;
-  const upvotes = 5;
-  const replies = [];
+export default function Comment({
+  id,
+  username,
+  time,
+  content,
+  upvotes,
+  replies,
+}) {
   return (
-    <div
-      className="flex items-start space-x-2 p-4 border-b border-gray-200"
-      key={id}
-    >
+    <div className="flex items-start space-x-2 p-4 border-gray-200" key={id}>
       <img
         src="https://styles.redditmedia.com/t5_379gw/styles/communityIcon_mx3mfwfzpup91.png?width=64&height=64&frame=1&auto=webp&crop=64:64,smart&s=d8343c9d7c2be645935e65af21d3c019c0c671b3"
         alt="Avatar"
@@ -34,7 +26,7 @@ export default function Comment(commentObj) {
           <span>👍 {upvotes}</span>
         </div>
         {replies && (
-          <div className="pl-8 mt-4 border-l border-gray-200">
+          <div className="mt-4 border-l border-gray-200">
             {replies.map((reply, index) => (
               <Comment
                 key={index}

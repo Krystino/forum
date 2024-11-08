@@ -1,5 +1,8 @@
 /* eslint-disable react/prop-types */
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
+
+import ExpandableText from './ExpandableText';
 
 export default function DetailPost({ post }) {
   const {
@@ -37,7 +40,15 @@ export default function DetailPost({ post }) {
         <span className="inline-block bg-orange-500 text-white text-xs px-2 py-1 rounded mt-2">
           {judge}
         </span>
-        <p className="text-sm text-gray-700 mt-2">{content}</p>
+        <p className="text-lg text-gray-700 mt-4 mb-8 ">
+          {/* <ExpandableText text={content} maxLength={50} /> */}
+          {content.split('\n').map((line, index) => (
+            <React.Fragment key={index}>
+              {line}
+              <br />
+            </React.Fragment>
+          ))}
+        </p>
         <div className="flex text-gray-500 text-sm mt-2 space-x-4">
           <span>
             👍 {upvotes > downvotes ? upvotes - downvotes : ''} 👎{' '}
