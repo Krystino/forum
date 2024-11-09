@@ -17,20 +17,15 @@ const countCommentsAndReplies = (comments) => {
 
 
 export default function Comment(comment) {
-  const { id, username, time, content, upvotes, replies, badge } = comment;
+  const { id, username, time, content, avatar, upvotes, replies, badge } =
+    comment;
 
 
   const [upvote, setUpvote] = useState(upvotes);
 
   return (
     <div className="flex items-start space-x-2 p-4 border-gray-200" key={id}>
-      <img
-        src={`/avatar${
-          username == '紫陌' ? 1 : Math.ceil(Math.random() * 15)
-        }.jpg`}
-        alt="Avatar"
-        className="w-8 h-8 rounded-full"
-      />
+      <img src={avatar} alt="Avatar" className="w-8 h-8 rounded-full" />
       <div className="flex-1">
         <div className="flex items-center text-xs text-gray-500 mb-1">
           <p className="font-medium">{username}</p>
@@ -69,6 +64,7 @@ export default function Comment(comment) {
                 username={reply.username}
                 badge={reply.badge}
                 time={reply.time}
+                avatar={reply.avatar || ''}
                 content={reply.content}
                 upvotes={reply.upvotes}
                 replies={reply.replies}
