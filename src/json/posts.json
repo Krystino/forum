@@ -77,11 +77,104 @@
     "badge": "1",
     "title": "对不对?同学结婚我去吃席，忘记带现金问她借了1000，晚上还钱了，结果她说我白吃一顿席，但我不是也随了1000？",
     "content": "如题，我现在也有点懵了，算得难道不对吗？",
-    "upvotes": 239,
+    "upvotes": 399,
     "downvotes": 22,
     "commentsCount": 10,
     "judge": "大对",
-    "comments": []
+    "comments": [
+      {
+        "id": "2_1",
+        "username": "Alex",
+        "avatar": "avatar8.jpg",
+        "isHost": false,
+        "badge": "plane",
+        "time": "4天前",
+        "content": "你借1000，贷1000借贷平衡，白吃一顿没有错",
+        "upvotes": 44,
+        "replies": [
+          {
+            "id": "2_1_1",
+            "username": "Boom",
+            "avatar": "avatar4.jpg",
+            "isHost": false,
+            "badge": "9",
+            "time": "4天前",
+            "content": "你借1000，贷1000借贷平衡，白吃一顿没有错",
+            "upvotes": 94,
+            "replies": []
+          },
+          {
+            "id": "2_1_2",
+            "username": "夏_",
+            "avatar": "avatar9.jpg",
+            "isHost": false,
+            "badge": "3",
+            "time": "3天前",
+            "content": "你是怎么贡献到飞机的？",
+            "upvotes": 64,
+            "replies": []
+          }
+        ]
+      },
+      {
+        "id": "2_2",
+        "username": "冰冰棒",
+        "avatar": "avatar7.jpg",
+        "isHost": false,
+        "badge": "K",
+        "time": "4天前",
+        "content": "借一千随礼一千已经销账了，晚上再给一千，不就是支出1000吗？帖主没问题",
+        "upvotes": 97,
+        "replies": [
+          {
+            "id": "2_2",
+            "username": "源雯",
+            "avatar": "avatar5.jpg",
+            "isHost": false,
+            "badge": "5",
+            "time": "3天前",
+            "content": "晚上还的不就是借的吗？",
+            "upvotes": 53,
+            "replies": [
+              {
+                "id": "2_2",
+                "username": "Corey_",
+                "avatar": "avatar4.jpg",
+                "isHost": false,
+                "badge": "4",
+                "time": "4天前",
+                "content": "啥意思，你是说帖主白天，去人家婚礼，要了1000块钱然后吃了顿饭走了？",
+                "upvotes": 41,
+                "replies": [
+                  {
+                    "id": "2_2",
+                    "username": "大饼婧婧🐰",
+                    "avatar": "avatar9.jpg",
+                    "isHost": false,
+                    "badge": "4",
+                    "time": "4天前",
+                    "content": "哈哈哈哈哈怎么连吃带拿呢还",
+                    "upvotes": 37,
+                    "replies": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "2_3",
+        "username": "喵呜",
+        "avatar": "avatar5.jpg",
+        "isHost": false,
+        "badge": "Straight",
+        "time": "4天前",
+        "content": "你的数学没有问题，但你去婚礼不带钱有点问题",
+        "upvotes": 36,
+        "replies": []
+      }
+    ]
   },
   {
     "id": "3",
@@ -129,7 +222,7 @@
             ]
           },
           {
-            "id": "4_1_1",
+            "id": "4_1_2",
             "username": "沐沐吖",
             "avatar": "avatar5.jpg",
             "isHost": false,
