@@ -36,7 +36,7 @@ export default function Post({ post }) {
           <span className="inline-block bg-[#23D9D3] text-white text-xs px-2 py-1 rounded mt-2">
             {judge}
           </span>
-          <p className="text-sm text-gray-700 mt-2">
+          <p className="text-base text-gray-700 mt-2">
             {content.length < 50 ? content : content.substr(0, 50) + '...'}
           </p>
         </div>

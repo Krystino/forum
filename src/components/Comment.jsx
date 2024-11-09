@@ -10,7 +10,9 @@ export default function Comment(comment) {
   return (
     <div className="flex items-start space-x-2 p-4 border-gray-200" key={id}>
       <img
-        src={`/avatar${Math.ceil(Math.random() * 15)}.jpg`}
+        src={`/avatar${
+          username == '紫陌' ? 1 : Math.ceil(Math.random() * 15)
+        }.jpg`}
         alt="Avatar"
         className="w-8 h-8 rounded-full"
       />
@@ -23,7 +25,7 @@ export default function Comment(comment) {
           <span className="mx-1">•</span>
           <p>{time}</p>
         </div>
-        <p className="text-sm text-gray-900 mb-2">{content}</p>
+        <p className="text-base text-gray-900 mb-2">{content}</p>
         <div className="flex items-center space-x-4 text-gray-500 text-sm">
           <span
             onClick={() => {

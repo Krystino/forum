@@ -13,19 +13,21 @@ export default function RedditForum() {
           <img
             src={forumAvatarUrl}
             alt="Reddit Logo"
-            className="w-16 h-16 mr-3 rounded-full"
+            className="w-16 h-16 mr-4 rounded-full"
           />
           <div className="flex-1">
-            <h1 className="text-2xl font-bold mt-1 text-[#23D9D3]">
-              {forumTitle}
-            </h1>
-            <p className="text-sm text-gray-400 mt-1">228,209 成员 ● 24 在线</p>
+            <h1 className="text-2xl font-bold text-[#23D9D3]">{forumTitle}</h1>
+            <div className="flex gap-2 mt-2">
+              <p className="text-sm text-gray-500">28,209 成员</p>
+              <p className="text-sm text-[#23D9D3]">●</p>
+              <p className="text-sm text-gray-500">24 在线</p>
+            </div>
           </div>
           <button className="ml-3 bg-[#23D9D3] text-white rounded-full px-4 py-1 text-sm">
             发帖
           </button>
         </header>
-        <p className="text-base text-gray-600 mt-5">{forumDesc}</p>
+        <p className="text-base text-gray-800 mt-5">{forumDesc}</p>
         <div className="mt-2">
           <a href="#" className="text-xs text-[#23D9D3] mr-2">
             查看更多

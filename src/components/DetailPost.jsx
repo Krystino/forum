@@ -21,7 +21,9 @@ export default function DetailPost({ post }) {
   return (
     <div className="flex pl-4 pr-16 pt-2 pb-8 border-b border-gray-200">
       <img
-        src={`/avatar${id == 1 ? 1 : Math.ceil(Math.random() * 15)}.jpg`}
+        src={`/avatar${
+          userName == '紫陌' ? 1 : Math.ceil(Math.random() * 15)
+        }.jpg`}
         alt="User Avatar"
         className="w-10 h-10 rounded-full mr-3"
       />
@@ -37,7 +39,7 @@ export default function DetailPost({ post }) {
         <span className="inline-block bg-[#23D9D3] text-white text-xs px-2 py-1 rounded mt-2">
           {judge}
         </span>
-        <p className="text-lg text-gray-700 my-4 ">
+        <p className="text-base text-gray-700 my-4 ">
           {/* <ExpandableText text={content} maxLength={50} /> */}
           {content.split('\n').map((line, index) => (
             <React.Fragment key={index}>
