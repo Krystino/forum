@@ -9,6 +9,7 @@ export default function Detail() {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const id = searchParams.get('id') || 1; // 获取查询参数 `id` 的值
+  console.log(posts, 'posts');
 
   const post = posts.filter((v) => v.id === id)[0];
 
