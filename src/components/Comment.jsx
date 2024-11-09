@@ -6,6 +6,7 @@ export default function Comment(comment) {
 
   const [upvote, setUpvote] = useState(upvotes);
 
+
   return (
     <div className="flex items-start space-x-2 p-4 border-gray-200" key={id}>
       <img
@@ -17,7 +18,7 @@ export default function Comment(comment) {
         <div className="flex items-center text-xs text-gray-500 mb-1">
           <p className="font-medium">{username}</p>
           <span className="inline-flex items-center rounded-full bg-gray-100 px-1.5 py-0.5 text-xs font-sm text-blue-700 ml-1">
-            {badgeMap[badge || '6'].val}
+            {badgeMap.find((item) => item.id === badge)['val']}
           </span>
           <span className="mx-1">•</span>
           <p>{time}</p>
@@ -47,6 +48,7 @@ export default function Comment(comment) {
               <Comment
                 key={index}
                 username={reply.username}
+                badge={reply.badge}
                 time={reply.time}
                 content={reply.content}
                 upvotes={reply.upvotes}
