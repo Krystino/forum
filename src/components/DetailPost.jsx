@@ -14,7 +14,24 @@ export default function DetailPost({ post }) {
     upvotes,
     judge,
     forum,
+    comments,
   } = post;
+
+  // 递归函数，计算评论和回复的总数
+  const countCommentsAndReplies = (comments) => {
+    let count = comments.length;
+
+    // 遍历每个评论，递归统计其回复的数量
+    comments.forEach((comment) => {
+      if (comment.replies && comment.replies.length > 0) {
+        count += countCommentsAndReplies(comment.replies); // 递归统计回复
+      }
+    });
+
+    return count;
+  };
+
+  console.log(countCommentsAndReplies(comments));
 
   return (
     <div className="px-8 py-4 border-b border-gray-200">
@@ -52,7 +69,10 @@ export default function DetailPost({ post }) {
       {/* AI 总结 */}
       <StreamChat>{'帖子标题：' + title + '\n帖子内容：' + content}</StreamChat>
 
-      <PostAction vote={upvotes} />
+      <PostAction
+        vote={upvotes}
+        commentsCount={countCommentsAndReplies(comments)}
+      />
     </div>
   );
 }

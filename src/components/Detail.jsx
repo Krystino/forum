@@ -104,6 +104,7 @@ export default function Detail() {
           </svg>
         </button>
       </div>
+      <div className="h-10"></div>
     </div>
   );
 }

@@ -1,11 +1,26 @@
 import { useState } from 'react';
 import badgeMap from '../json/badge.json';
 
+// 递归函数，计算评论和回复的总数
+const countCommentsAndReplies = (comments) => {
+  let count = comments.length;
+
+  // 遍历每个评论，递归统计其回复的数量
+  comments.forEach((comment) => {
+    if (comment.replies && comment.replies.length > 0) {
+      count += countCommentsAndReplies(comment.replies); // 递归统计回复
+    }
+  });
+
+  return count;
+};
+
+
 export default function Comment(comment) {
   const { id, username, time, content, upvotes, replies, badge } = comment;
 
-  const [upvote, setUpvote] = useState(upvotes);
 
+  const [upvote, setUpvote] = useState(upvotes);
 
   return (
     <div className="flex items-start space-x-2 p-4 border-gray-200" key={id}>
@@ -42,7 +57,9 @@ export default function Comment(comment) {
           >
             👎{' '}
           </span>
-          <span>💬 {(replies && replies.length) || 0}</span>
+          <span>
+            💬 {(replies ? countCommentsAndReplies(replies) : 0) || 0}
+          </span>
         </div>
         {replies && (
           <div className="mt-4 border-l border-gray-200">
