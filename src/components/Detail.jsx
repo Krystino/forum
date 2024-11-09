@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import posts from '../json/posts.json';
@@ -7,6 +8,11 @@ import Comment from './Comment';
 
 export default function Detail() {
   const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // 页面加载时滚动到顶部
+  }, [location]);
+
   const searchParams = new URLSearchParams(location.search);
   const id = searchParams.get('id') || 1; // 获取查询参数 `id` 的值
 
