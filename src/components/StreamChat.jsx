@@ -91,7 +91,7 @@ export default function StreamChat(content) {
   return (
     <div
       className="my-4 p-4 bg-gray-100 rounded-lg shadow"
-      style={{ width: '360px' }}
+      style={{ width: '300px' }}
     >
       {/* AI Summarize Button */}
       <button
