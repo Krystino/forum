@@ -11,16 +11,23 @@ const colorMapping = {
 };
 
 export default function Post({ post }) {
-  const { username: userName, time, title, content, upvotes, judge, id } = post;
+  const {
+    username: userName,
+    time,
+    title,
+    avatar,
+    content,
+    upvotes,
+    judge,
+    id,
+  } = post;
 
   const navigate = useNavigate();
 
   return (
     <div className="flex p-4 border-b border-gray-200">
       <img
-        src={`/avatar${
-          userName == '紫陌' ? 1 : Math.ceil(Math.random() * 15)
-        }.jpg`}
+        src={avatar}
         alt="User Avatar"
         className="w-10 h-10 rounded-full mr-3"
       />
@@ -43,7 +50,7 @@ export default function Post({ post }) {
             {judge}
           </span>
           <p className="text-base text-gray-700 my-4">
-            {content.length < 50 ? content : content.substr(0, 50) + '...'}
+            {content.length < 50 ? content : content.substr(0, 55) + '...'}
           </p>
         </div>
 

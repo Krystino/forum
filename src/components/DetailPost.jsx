@@ -11,11 +11,13 @@ export default function DetailPost({ post }) {
     time,
     title,
     content,
+    avatar,
     upvotes,
     judge,
     forum,
     comments,
   } = post;
+  console.log(post);
 
   // 递归函数，计算评论和回复的总数
   const countCommentsAndReplies = (comments) => {
@@ -37,9 +39,7 @@ export default function DetailPost({ post }) {
     <div className="px-8 py-4 border-b border-gray-200">
       <div className="flex">
         <img
-          src={`/avatar${
-            userName == '紫陌' ? 1 : Math.ceil(Math.random() * 15)
-          }.jpg`}
+          src={avatar}
           alt={userName}
           className="w-8 h-8 rounded-full mr-3"
         />

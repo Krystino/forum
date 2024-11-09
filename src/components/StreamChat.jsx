@@ -6,8 +6,6 @@ export default function StreamChat(content) {
   const [loading, setLoading] = useState(false);
   const [showRes, setShowRes] = useState(false);
 
-  console.log(dialog, 'dialog');
-
   const fetchData = async () => {
     setLoading(true);
     let previousContent = ''; // 用于存储之前的内容，防止重复
