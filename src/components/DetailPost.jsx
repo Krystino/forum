@@ -46,7 +46,9 @@ export default function DetailPost({ post }) {
           ))}
         </p>
         {/* AI 总结 */}
-        <StreamChat>{'帖子标题' + title + '\n帖子内容' + content}</StreamChat>
+        <StreamChat>
+          {'帖子标题：' + title + '\n帖子内容：' + content}
+        </StreamChat>
         <div className="flex text-gray-500 text-sm mt-2 space-x-4">
           <span
             onClick={() => {

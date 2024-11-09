@@ -6,6 +6,8 @@ export default function StreamChat(content) {
   const [loading, setLoading] = useState(false);
   const [showRes, setShowRes] = useState(false);
 
+  console.log(dialog, 'dialog');
+
   const fetchData = async () => {
     setLoading(true);
     let previousContent = ''; // 用于存储之前的内容，防止重复
@@ -89,7 +91,7 @@ export default function StreamChat(content) {
   return (
     <div
       className="my-4 p-4 bg-gray-100 rounded-lg shadow"
-      style={{ width: '380px' }}
+      style={{ width: '360px' }}
     >
       {/* AI Summarize Button */}
       <button
