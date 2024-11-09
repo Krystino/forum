@@ -18,7 +18,7 @@ export default function DetailPost({ post }) {
   const [upvote, setUpvote] = useState(upvotes);
 
   return (
-    <div className="flex p-4 border-b border-gray-200">
+    <div className="flex pl-4 pr-10 pt-2 pb-8 border-b border-gray-200">
       <img
         src="https://styles.redditmedia.com/t5_379gw/styles/communityIcon_mx3mfwfzpup91.png?width=64&height=64&frame=1&auto=webp&crop=64:64,smart&s=d8343c9d7c2be645935e65af21d3c019c0c671b3"
         alt="User Avatar"
@@ -36,7 +36,7 @@ export default function DetailPost({ post }) {
         <span className="inline-block bg-orange-500 text-white text-xs px-2 py-1 rounded mt-2">
           {judge}
         </span>
-        <p className="text-lg text-gray-700 mt-4 mb-8 ">
+        <p className="text-lg text-gray-700 my-4 ">
           {/* <ExpandableText text={content} maxLength={50} /> */}
           {content.split('\n').map((line, index) => (
             <React.Fragment key={index}>
@@ -49,7 +49,10 @@ export default function DetailPost({ post }) {
         <StreamChat>
           {'帖子标题：' + title + '\n帖子内容：' + content}
         </StreamChat>
-        <div className="flex text-gray-500 text-sm mt-2 space-x-4">
+        <div
+          className="flex text-gray-500 text-sm mt-4 space-x-8"
+          style={{ marginTop: '30px' }}
+        >
           <span
             onClick={() => {
               setUpvote(upvote + 1);
