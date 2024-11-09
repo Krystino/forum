@@ -12,7 +12,7 @@ export default function PostContent({ content }) {
   const displayContent = isExpanded ? content : `${content.slice(0, 88)}...`;
 
   return (
-    <div className="p-4">
+    <div className="py-4">
       <p className="text-base text-gray-800">{displayContent}</p>
 
       {/* 查看更多 / 收起按钮 */}
