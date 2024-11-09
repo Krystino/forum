@@ -15,13 +15,15 @@
       {
         "id": "1_1",
         "username": "听说",
+        "avatar": "avatar8.jpg",
         "badge": "6",
         "time": "2小时前",
         "content": "你是对的！这种情况提醒你一嘴就行，根本用不着他上手帮你拉",
         "upvotes": 24,
         "replies": [
           {
-            "username": "紫陌",
+            "username": "紫陌【帖主】",
+            "avatar": "avatar1.jpg",
             "isHost": true,
             "badge": "2",
             "time": "2小时前",
@@ -43,7 +45,6 @@
         "id": "2",
         "username": "熊奔奔",
         "badge": "king",
-        "badge": "3",
         "time": "2小时前",
         "content": "看你俩关系怎么样，除非同事不是直男切和你关系不错，除此之外我想不到不把这叫“性骚扰”的情况",
         "upvotes": 24,
