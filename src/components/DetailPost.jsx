@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 
 // import ExpandableText from './ExpandableText';
-import AISummary from './AISummary';
+import StreamChat from './StreamChat';
 
 export default function DetailPost({ post }) {
   const {
@@ -46,7 +46,7 @@ export default function DetailPost({ post }) {
           ))}
         </p>
         {/* AI 总结 */}
-        <AISummary />
+        <StreamChat>{content}</StreamChat>
         <div className="flex text-gray-500 text-sm mt-2 space-x-4">
           <span
             onClick={() => {
