@@ -9,7 +9,7 @@ export default function PostAction({ vote }) {
       <div className="flex gap-x-4">
         <button
           type="button"
-          className="inline-flex items-center gap-x-1 rounded-full bg-white px-2.5 py-1 text-sm font-light text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300"
+          className="inline-flex items-center gap-x-1 rounded-full bg-white px-2.5 py-2 text-sm font-light text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300"
         >
           {/* thumb up */}
           <div
@@ -22,7 +22,7 @@ export default function PostAction({ vote }) {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="size-4"
+              className="size-5"
             >
               <path
                 strokeLinecap="round"
@@ -37,14 +37,13 @@ export default function PostAction({ vote }) {
           {/* down-vote */}
           <div className="flex gap-1" onClick={() => setUpvote(upvote - 1)}>
             {upvote < 0 ? upvote : ''}
-
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              className="size-4"
+              className="size-5"
             >
               <path
                 strokeLinecap="round"
@@ -79,7 +78,7 @@ export default function PostAction({ vote }) {
       <div className="flex gap-x-4">
         <button
           type="button"
-          className="inline-flex items-center gap-x-1.5 rounded-full bg-white px-2.5 py-1 text-sm font-light text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300"
+          className="inline-flex items-center gap-x-1.5 rounded-full bg-white px-2.5 py-2 text-sm font-light text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

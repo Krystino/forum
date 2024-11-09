@@ -3,17 +3,15 @@ import { useNavigate } from 'react-router-dom';
 
 import PostAction from './PostAction';
 
+const colorMapping = {
+  大对: 'bg-green-800',
+  对: 'bg-green-400',
+  不对: 'bg-red-400',
+  待定: 'bg-gray-500',
+};
+
 export default function Post({ post }) {
-  const {
-    username: userName,
-    time,
-    title,
-    content,
-    upvotes,
-    downvotes,
-    judge,
-    id,
-  } = post;
+  const { username: userName, time, title, content, upvotes, judge, id } = post;
 
   const navigate = useNavigate();
 
@@ -37,7 +35,11 @@ export default function Post({ post }) {
           className="cursor-pointer"
         >
           <h2 className="text-lg font-semibold text-gray-900 mt-1">{title}</h2>
-          <span className="inline-block bg-[#23D9D3] text-white text-xs px-2 py-1 rounded mt-2">
+          <span
+            className={`inline-block ${
+              colorMapping[judge] || 'bg-[#23D9D3]'
+            } text-white text-xs px-2 py-1 rounded mt-2`}
+          >
             {judge}
           </span>
           <p className="text-base text-gray-700 my-4">

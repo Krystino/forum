@@ -1,8 +1,7 @@
 /* eslint-disable react/prop-types */
-import React from 'react';
 
-// import ExpandableText from './ExpandableText';
 import StreamChat from './StreamChat';
+import PostContent from './ExpandableText';
 
 import PostAction from './PostAction';
 
@@ -48,15 +47,7 @@ export default function DetailPost({ post }) {
         <span className="inline-block bg-[#23D9D3] text-white text-xs mt-2 px-2 py-1 rounded mt-2">
           {judge}
         </span>
-        <p className="text-base text-gray-700 my-4 ">
-          {/* <ExpandableText text={content} maxLength={50} /> */}
-          {content.split('\n').map((line, index) => (
-            <React.Fragment key={index}>
-              {line}
-              <br />
-            </React.Fragment>
-          ))}
-        </p>
+        <PostContent content={content} />
       </div>
       {/* AI 总结 */}
       <StreamChat>{'帖子标题：' + title + '\n帖子内容：' + content}</StreamChat>
