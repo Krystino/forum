@@ -9,7 +9,7 @@ export default function Comment(comment) {
   return (
     <div className="flex items-start space-x-2 p-4 border-gray-200" key={id}>
       <img
-        src="https://styles.redditmedia.com/t5_379gw/styles/communityIcon_mx3mfwfzpup91.png?width=64&height=64&frame=1&auto=webp&crop=64:64,smart&s=d8343c9d7c2be645935e65af21d3c019c0c671b3"
+        src={`/avatar${Math.ceil(Math.random() * 15)}.jpg`}
         alt="Avatar"
         className="w-8 h-8 rounded-full"
       />

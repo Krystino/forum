@@ -91,7 +91,7 @@ export default function StreamChat(content) {
   return (
     <div
       className="my-4 p-4 bg-gray-100 rounded-lg shadow"
-      style={{ width: '350px' }}
+      style={{ width: '280px' }}
     >
       {/* AI Summarize Button */}
       <button
@@ -100,7 +100,7 @@ export default function StreamChat(content) {
         disabled={loading}
         className="rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-none disabled:bg-gray-300"
       >
-        {loading ? '生成中...' : 'AI 总结帖子内容'}
+        {loading ? '生成中...' : 'AI 总结'}
       </button>
 
       {/* Display Summary */}

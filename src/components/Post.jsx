@@ -18,7 +18,7 @@ export default function Post({ post }) {
   return (
     <div className="flex p-4 border-b border-gray-200">
       <img
-        src="https://styles.redditmedia.com/t5_379gw/styles/communityIcon_mx3mfwfzpup91.png?width=64&height=64&frame=1&auto=webp&crop=64:64,smart&s=d8343c9d7c2be645935e65af21d3c019c0c671b3"
+        src={`/avatar${id == 1 ? 1 : Math.ceil(Math.random() * 15)}.jpg`}
         alt="User Avatar"
         className="w-10 h-10 rounded-full mr-3"
       />
@@ -33,7 +33,7 @@ export default function Post({ post }) {
           className="cursor-pointer"
         >
           <h2 className="text-lg font-semibold text-gray-900 mt-1">{title}</h2>
-          <span className="inline-block bg-orange-500 text-white text-xs px-2 py-1 rounded mt-2">
+          <span className="inline-block bg-[#23D9D3] text-white text-xs px-2 py-1 rounded mt-2">
             {judge}
           </span>
           <p className="text-sm text-gray-700 mt-2">
