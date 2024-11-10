@@ -15,11 +15,11 @@ export default function StreamChat(content) {
         method: 'POST',
         headers: {
           Authorization:
-            'Bearer pat_gnfbsmDR3TLQEcMRMdoquMf0L99YI2yMPf9eXLL54pnBFzuAk8Y7VvcIfO25Wpvl',
+            'Bearer pat_yFhStrOnafAA7E1qzygVzNoYYqKSr9HULU76r4uCJo5VzshsbphsUq9kgfde2UVI',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          bot_id: '7435470389272281125',
+          bot_id: '7435207914224107583',
           user_id: '123',
           stream: true, // 设置为流式
           auto_save_history: true,
